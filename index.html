@@ -20,12 +20,17 @@
         <section>
             <div class="container my-5">
                 <div class="row">
+                    <div class="col">
+                        <h1 class="text-center mb-3 ">Phone Fair</h1>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
                         <div class="d-flex">
                             <input type="text" class="form-control" placeholder="Search Mobile " id="searchBox">
                             <button type="submit" id="searchBox" class=" btn btn-primary" onclick="searchPhone()">
-                                PhoneFair</button>
+                                Search</button>
                         </div>
                     </div>
                 </div>
@@ -39,15 +44,16 @@
 
     <!-- main section start -->
     <main class="container text-center">
+        <h2 id="spinner">Loading...</h2>
         <!-- no product -->
         <section>
-            <div id="noPhone">
-                <h2 class="text-danger"> No Phone Found</h2>
+            <div id="noPhone" class="d-none">
+                <h2 class="text-danger"> Product Not Found</h2>
             </div>
         </section>
         <!-- product detailes -->
         <section>
-            <div id="phoneDetailes" >
+            <div id="phoneDetailes">
 
             </div>
         </section>
@@ -57,10 +63,13 @@
 
             </div>
         </section>
+        <!-- spiner section -->
 
 
-        <section id="">
-            
+        <!-- moreButton -->
+        <section class="mx-auto">
+            <button id="seeMore" onclick="loadMore()" class="btn btn-primary mb-5 d-none rounded-pill"> See More
+                Items</button>
         </section>
 
 
