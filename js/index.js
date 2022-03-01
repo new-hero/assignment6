@@ -93,7 +93,7 @@ const phoneDetailesData = phoneId => {
                 <h5>ChipSet: ${phoneId?.mainFeatures.chipSet} </h5>
                 <h5>Memory: ${phoneId?.mainFeatures.memory} </h5>
                 <h3>Sensors</h3>
-                <h5>${phoneId?.mainFeatures?.sensors ? phoneId.mainFeatures.sensors : 'Not supported'}</h5>
+                <h5>${phoneId?.mainFeatures?.sensors ? phoneId.mainFeatures.sensors : 'Not supported'} .</h5>
                 <h3>Others </h3>
                 <h5>WLAN: ${phoneId.others ? phoneId.others.WLAN : 'Not Support'} </h5>
                 <h5>Bluetooth: ${phoneId.others ? phoneId.others.Bluetooth : 'Not Support'} </h5>
@@ -103,8 +103,8 @@ const phoneDetailesData = phoneId => {
                 <h5>USB: ${phoneId.others ? phoneId.others.USB : 'Not Support'} </h5>
             </div>
         </div>
-        <hr class="border border-dark"> 
     </div>
+    <hr class="border border-dark pb-2"> 
     `;
     DetailesDiv.appendChild(div);
 }
