@@ -35,9 +35,14 @@ const phoneDetailes = id => {
 
 const phoneDetailesData = phoneId => {
     const DetailesDiv = document.getElementById('phoneDetailes');
+
+
+
+
+
     const div = document.createElement('div');
     div.innerHTML = `
-    <div class="row mb-5">
+    <div class="row mb-5 border border-3 p-3">
     <div class="col">
         <img src="${phoneId.image}" alt="" class="img-fluid" width="400px">
     </div>
@@ -51,6 +56,9 @@ const phoneDetailesData = phoneId => {
              <h5>ChipSet: ${phoneId?.mainFeatures.chipSet} </h5>
              <h5>Memory: ${phoneId?.mainFeatures.memory} </h5>
              <h3>Sensors</h3>
+            
+             <h5>${phoneId?.mainFeatures?.sensors ? phoneId.mainFeatures.sensors : 'Not supported'}</h5>
+
              <h3>Others </h3>
              <h5>WLAN: ${phoneId.others ? phoneId.others.WLAN : 'Not'} </h5>
              <h5>Bluetooth: ${phoneId.others ? phoneId.others.Bluetooth : 'Not Support'} </h5>
@@ -62,12 +70,29 @@ const phoneDetailesData = phoneId => {
         </div>
     </div>
     </div>
+
     `;
     DetailesDiv.appendChild(div);
 
 
 
 }
+
+const getSensotList = sensors => {
+    // console.log(sensors)
+    const list = document.getElementById('list')
+    for (const sensor of sensors) {
+        const li = document.createElement('li');
+        li.innerText = sensor;
+        list.appendChild(li)
+
+    }
+
+
+
+    // const sensorList= li;
+}
+
 
 /* 
     
@@ -84,8 +109,7 @@ const phoneDetailesData = phoneId => {
              <h6>Radio: ${phoneId.} </h6>
              <h6>USB: ${phoneId.} </h6>
 
-
-               <h6>WLAN: ${phoneId.others.WLAN} </h6>
+             <h6>WLAN: ${phoneId.others.WLAN} </h6>
              <h6>Bluetooth: ${phoneId.others} </h6>
              <h6>GPS: ${phoneId.others} </h6>
              <h6>NFC: ${phoneId.others} </h6>
