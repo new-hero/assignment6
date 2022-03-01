@@ -79,12 +79,12 @@ const phoneDetailesData = phoneId => {
     const DetailesDiv = document.getElementById('phoneDetailes');
     const div = document.createElement('div');
     div.innerHTML = `
-    <div class="row   p-3">
+    <div class="row  row-cols-1 row-cols-lg-2 p-3">
         <div class="col">
             <img src="${phoneId.image}" alt="" class="img-fluid my-5" width="400px">
         </div>
         <div class="col">
-            <div class="text-start my-5">
+            <div class="text-start my-5 p-2">
                 <h3> ${phoneId.name}</h3>
                 <h4>Brand: ${phoneId.brand ? phoneId.brand : 'Brand No Found'}</h4>
                 <h5>Release Date: ${phoneId.releaseDate ? phoneId.releaseDate : 'Release Date Not Found'}</h5>
